@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <script>
+        alert("Selamat Datang");
+    </script>
+
+</head>
+
+<body>
+    <form action="loginsukses.html" method="get" id="myForm" onsubmit=" return validasi()">
+        <table>
+            <h2>Form</h2>
+            <tr>
+                <td>Nama Pelanggan</td>
+                <td><input type="text" name="username" placeholder="username" maxlength="10" required/></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="Email" name="Email" placeholder=Email formnovalidate required></td>
+                <tr>
+                    <td>Jam Keberangkatan</td>
+                    <td><input type="number" name="Jamkeberangkatan" placeholder="Jam" required></td>
+                    <tr>
+                        <td>Tujuan Keberangkatan</td>
+                        <td><input type="text" name="Tujuan Keberangkatan" placeholder="Tujuan" required></td>
+                        <tr>
+                            <td>Jumlah Tiket</td>
+                            <td><input type="number" name="Jumlah" placeholder="jumlah" minlength="1" maxlength="10" required></td>
+                            <tr>
+                                <td> <input class="submit" type="submit" name="submit" value="submit"></td>
+                            </tr>
+        </table>
+    </form>
+</body>
+<script type="text/javascript">
+    function validasi() {
+        var username = document.forms["myForm"]["username"].value;
+        var password = document.forms["myForm"]["password"].value;
+        if (username == "Rohimin" && password == "111101") {
+            alert("Login Sukses");
+        } else if (username == "" || password == "") {
+            alert("Masukan username dan password Anda");
+            return false;
+        } else {
+            alert("Username atau password yang Anda masukan SALAH");
+            return false;
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <script>
+        alert("Selamat Datang");
+    </script>
+
+</head>
+
+<body>
+    <form action="loginsukses.html" method="get" id="myForm" onsubmit=" return validasi()">
+        <h2>Welcome</h2>
+        Username <input type="text" name="username" placeholder="username"> Password <input type="password" name="password" placeholder="password">
+        <input class="login" type="submit" name="submit" value="login">
+    </form>
+</body>
+<script type="text/javascript">
+    function validasi() {
+        var username = document.forms["myForm"]["username"].value;
+        var password = document.forms["myForm"]["password"].value;
+        if (username == "Rohimin" && password == "111101") {
+            alert("Login Sukses");
+        } else if (username == "" || password == "") {
+            alert("Masukan username dan password Anda");
+            return false;
+        } else {
+            alert("Username atau password yang Anda masukan SALAH");
+            return false;
+        }
+    }
+</script>
+
+</html>
